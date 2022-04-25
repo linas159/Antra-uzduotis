@@ -143,7 +143,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="kursiokai.txt" />
-    <Text Include="Makefile.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="funkcijos.cpp" />

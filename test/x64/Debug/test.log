@@ -1,33 +1,15 @@
 ﻿  test.cpp
-C:\Users\User\OneDrive - Vilnius University\Pirma uzduotis\test\funkcijos.cpp(75,73): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\User\OneDrive - Vilnius University\Pirma uzduotis\test\funkcijos.cpp(79,42): warning C4244: '=': conversion from '_Ty' to 'float', possible loss of data
-          with
-          [
-              _Ty=int
-          ]
-C:\Users\User\OneDrive - Vilnius University\Pirma uzduotis\test\funkcijos.cpp(85,37): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\User\OneDrive - Vilnius University\Pirma uzduotis\test\funkcijos.cpp(86,40): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\User\OneDrive - Vilnius University\Pirma uzduotis\test\funkcijos.cpp(148,79): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\User\OneDrive - Vilnius University\Pirma uzduotis\test\funkcijos.cpp(152,45): warning C4244: '=': conversion from '_Ty' to 'float', possible loss of data
-          with
-          [
-              _Ty=int
-          ]
-C:\Users\User\OneDrive - Vilnius University\Pirma uzduotis\test\funkcijos.cpp(176,37): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\User\OneDrive - Vilnius University\Pirma uzduotis\test\funkcijos.cpp(177,40): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\User\OneDrive - Vilnius University\Pirma uzduotis\test\funkcijos.cpp(231,87): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\User\OneDrive - Vilnius University\Pirma uzduotis\test\funkcijos.cpp(235,47): warning C4244: '=': conversion from '_Ty' to 'float', possible loss of data
-          with
-          [
-              _Ty=int
-          ]
-C:\Users\User\OneDrive - Vilnius University\Pirma uzduotis\test\funkcijos.cpp(241,40): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\User\OneDrive - Vilnius University\Pirma uzduotis\test\funkcijos.cpp(242,43): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\User\OneDrive - Vilnius University\Pirma uzduotis\test\funkcijos.cpp(344,42): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\User\OneDrive - Vilnius University\Pirma uzduotis\test\funkcijos.cpp(415,36): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\User\OneDrive - Vilnius University\Pirma uzduotis\test\funkcijos.cpp(481,42): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\User\OneDrive - Vilnius University\Pirma uzduotis\test\funkcijos.cpp(581,42): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\User\OneDrive - Vilnius University\Pirma uzduotis\test\funkcijos.cpp(684,36): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\User\OneDrive - Vilnius University\Pirma uzduotis\test\funkcijos.cpp(792,42): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 C:\Users\User\OneDrive - Vilnius University\Pirma uzduotis\test\test.cpp(5,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  test.vcxproj -> C:\Users\User\OneDrive - Vilnius University\Pirma uzduotis\x64\Debug\test.exe
+test.obj : error LNK2019: unresolved external symbol "void __cdecl exists_test(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?exists_test@@YAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) referenced in function main
+test.obj : error LNK2019: unresolved external symbol "void __cdecl skaicius(int &)" (?skaicius@@YAXAEAH@Z) referenced in function main
+test.obj : error LNK2019: unresolved external symbol "void __cdecl ivestisranka(class std::vector<struct studentas,class std::allocator<struct studentas> > &)" (?ivestisranka@@YAXAEAV?$vector@Ustudentas@@V?$allocator@Ustudentas@@@std@@@std@@@Z) referenced in function main
+test.obj : error LNK2019: unresolved external symbol "void __cdecl ivestis(class std::vector<struct studentas,class std::allocator<struct studentas> > &)" (?ivestis@@YAXAEAV?$vector@Ustudentas@@V?$allocator@Ustudentas@@@std@@@std@@@Z) referenced in function main
+test.obj : error LNK2019: unresolved external symbol "void __cdecl isvestis(class std::vector<struct studentas,class std::allocator<struct studentas> >)" (?isvestis@@YAXV?$vector@Ustudentas@@V?$allocator@Ustudentas@@@std@@@std@@@Z) referenced in function main
+test.obj : error LNK2019: unresolved external symbol "void __cdecl failugeneracija(int)" (?failugeneracija@@YAXH@Z) referenced in function main
+test.obj : error LNK2019: unresolved external symbol "void __cdecl greicioanalizevector(int)" (?greicioanalizevector@@YAXH@Z) referenced in function main
+test.obj : error LNK2019: unresolved external symbol "void __cdecl greicioanalizelist(int)" (?greicioanalizelist@@YAXH@Z) referenced in function main
+test.obj : error LNK2019: unresolved external symbol "void __cdecl greicioanalizedeque(int)" (?greicioanalizedeque@@YAXH@Z) referenced in function main
+test.obj : error LNK2019: unresolved external symbol "void __cdecl greicioanalizevector2(int)" (?greicioanalizevector2@@YAXH@Z) referenced in function main
+test.obj : error LNK2019: unresolved external symbol "void __cdecl greicioanalizelist2(int)" (?greicioanalizelist2@@YAXH@Z) referenced in function main
+test.obj : error LNK2019: unresolved external symbol "void __cdecl greicioanalizedeque2(int)" (?greicioanalizedeque2@@YAXH@Z) referenced in function main
+C:\Users\User\OneDrive - Vilnius University\Pirma uzduotis\x64\Debug\test.exe : fatal error LNK1120: 12 unresolved externals
