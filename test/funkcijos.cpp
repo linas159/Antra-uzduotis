@@ -2,6 +2,38 @@
 
 ifstream in("kursiokai.txt");
 
+Student::Student(std::istream& in, int kieknd) 
+{
+    readStudent(in, kieknd);
+}
+
+//void Student::galBalas(vector <double> nd, double egz)
+//{
+//    double vid = 0, gall;
+//    for (int i = 0; i < nd.size(); i++)
+//    {
+//        vid += nd[i];
+//    }
+//    gall = (vid / nd.size()) * 0.4 + egz * 0.6;
+//    cout << gall;
+//    this->gal = gall;
+//}
+
+istream& Student::readStudent(istream& in, int kieknd)
+{
+    string a;
+    in >> vard >> pavard;
+    double b, vid=0;
+    for (int j = 0; j < kieknd; j++)
+    {
+        in >> b;
+        this->nd.push_back(b);
+        vid += b;
+    }
+    in >> egz;
+    gal = (vid / nd.size()) * 0.4 + egz * 0.6;
+}
+
 void exists_test(const string& name)
 {
     ifstream file(name);
@@ -258,7 +290,12 @@ void ivestis(vector <studentas>& stud)
 
 bool palyginimas(studentas& a, studentas& b)
 {
-    return a.gal < b.gal;
+    return a.gal > b.gal;
+}
+
+bool palyginimas2(Student& a, Student& b)
+{
+    return a.galbal() > b.galbal();
 }
 
 void isvestis(vector <studentas> stud)
@@ -568,27 +605,17 @@ void greicioanalizevector2(int kiekstud)
         }
     }
     kieknd += -3;
-    int a, vid = 0;
-    vector <studentas> stud;
+    vector <Student> stud;
     for (int i = 0; i < kiekstud; i++)
     {
-        stud.push_back(studentas());
-        in >> stud[i].vard >> stud[i].pavard;
-        for (int j = 0; j < kieknd; j++)
-        {
-            in >> a;
-            vid += a;
-        }
-        in >> stud[i].egz;
-        stud[i].gal = vid / kieknd * 0.4 + stud[i].egz * 0.6;
-        vid = 0;
+        stud.push_back(Student(in, kieknd));
     }
     stud.shrink_to_fit();
     in.close();
     duration<double> diff = high_resolution_clock::now() - pradzia;
     cout << kiekstud << " nuskaitymas uztruko: " << diff.count() << endl;
 
-    vector <studentas> nend;
+    vector <Student> nend;
     auto rus = high_resolution_clock::now();
     rusiavimasvector2(stud, nend);
     diff = high_resolution_clock::now() - rus;
@@ -602,31 +629,30 @@ void greicioanalizevector2(int kiekstud)
     system("Pause");
 }
 
-void rusiavimasvector2(vector <studentas>& stud, vector <studentas>& nend)
+void rusiavimasvector2(vector <Student>& stud, vector <Student>& nend)
 {
-    sort(stud.begin(), stud.end(), palyginimas);
-    int i = 0;
-    for (int i = 0; i < stud.size(); i++)//(auto &temp:stud)
+    sort(stud.begin(), stud.end(), palyginimas2);
+    vector<Student>::iterator it = stud.end();
+    it--;
+    while (it->galbal() < 5.0)
     {
-        if (stud[i].gal < 5.0)
-        {
-            nend.push_back(stud[i]);
-            stud.erase(stud.begin() + i);
-            i--;
-        }
+        nend.push_back(*it);
+        stud.pop_back();
+        it = stud.end();
+        it--;
     }
     stud.shrink_to_fit();
     nend.shrink_to_fit();
 }
 
-void nendartiolaiifaila2(int kieknd, vector <studentas> nend, int kiekstud)
+void nendartiolaiifaila2(int kieknd, vector <Student> nend, int kiekstud)
 {
     auto pradzia = high_resolution_clock::now();
     ofstream out("nendartiolai" + to_string(kiekstud) + ".txt");
     stringstream buffer;
     for (int i = 0; i < nend.size(); i++)
     {
-        buffer << left << setw(20) << nend[i].vard << " " << left << setw(20) << nend[i].pavard << " " << left << setw(20) << fixed << setprecision(2) << nend[i].gal << endl;
+        buffer << left << setw(20) << nend[i].vardas() << " " << left << setw(20) << nend[i].pavarde() << " " << left << setw(20) << fixed << setprecision(2) << nend[i].galbal() << endl;
     }
     out << buffer.str();
     buffer.str("");
@@ -636,14 +662,14 @@ void nendartiolaiifaila2(int kieknd, vector <studentas> nend, int kiekstud)
     cout << kiekstud << " nendartiolu isvedimas i faila: " << diff.count() << endl;
 }
 
-void kietiakaiifaila2(int kieknd, vector <studentas> stud, int kiekstud)
+void kietiakaiifaila2(int kieknd, vector <Student> stud, int kiekstud)
 {
     auto pradzia = high_resolution_clock::now();
     ofstream out("kietiakai" + to_string(kiekstud) + ".txt");
     stringstream buffer;
     for (int i = 0; i < stud.size(); i++)
     {
-        buffer << left << setw(20) << stud[i].vard << " " << left << setw(20) << stud[i].pavard << " " << left << setw(20) << fixed << setprecision(2) << stud[i].gal << endl;
+        buffer << left << setw(20) << stud[i].vardas() << " " << left << setw(20) << stud[i].pavarde() << " " << left << setw(20) << fixed << setprecision(2) << stud[i].galbal() << endl;
     }
     out << buffer.str();
     buffer.str("");
@@ -709,24 +735,14 @@ void rusiavimaslist2(list <studentas>& stud, list <studentas>& nend)
 {
     stud.sort(palyginimas);
     list<studentas>::iterator it = stud.begin();
+    it--;
     while (it->gal < 5.0)
     {
         nend.push_back(*it);
         stud.pop_front();
         it = stud.begin();
+        it--;
     }
-    //int i = 0;
-    /*for (auto& s : stud)//(auto &temp:stud)
-    {
-        it = stud.begin();
-        advance(it, i);
-        if (s.gal < 5.0)
-        {
-            nend.splice(nend.begin(), stud, it);
-            i--;
-        }
-        i++;
-    }*/
 }
 
 void nendartiolaiifailalist2(int kieknd, list <studentas> nend, int kiekstud)
@@ -816,15 +832,14 @@ void greicioanalizedeque2(int kiekstud)
 void rusiavimasdeque2(deque <studentas>& stud, deque <studentas>& nend)
 {
     sort(stud.begin(), stud.end(), palyginimas);
-    int i = 0;
-    for (int i = 0; i < stud.size(); i++)//(auto &temp:stud)
+    deque<studentas>::iterator it = stud.end();
+    it--;
+    while (it->gal < 5.0)
     {
-        if (stud[i].gal < 5.0)
-        {
-            nend.push_back(stud[i]);
-            stud.erase(stud.begin() + i);
-            i--;
-        }
+        nend.push_back(*it);
+        stud.pop_back();
+        it = stud.end();
+        it--;
     }
     stud.shrink_to_fit();
     nend.shrink_to_fit();

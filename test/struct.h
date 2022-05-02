@@ -15,12 +15,32 @@ struct studentas
     float galmed;
 };
 
+class Student {
+    // realizacija
+private:
+    string vard;
+    string pavard;
+    double egz;
+    vector<double> nd;
+    float gal;
+    // interfeisas
+public:
+    Student() : egz(0) { }  // default konstruktorius
+    Student(istream& in, int kieknd); //konstr
+    inline string vardas() const { return vard; }    // get'eriai, inline
+    inline string pavarde() const { return pavard; }  // get'eriai, inline
+    inline float galbal() const { return gal; }
+    //void galBalas(vector <double> nd, double egz);  // get'eriai
+    istream& readStudent(std::istream&, int kieknd);  // set'eriai
+};
+
 void exists_test(const string& name);
 void skaicius(int& a);
 void ivestisranka(vector <studentas>& stud);
 int kiekpazymiu();
 void ivestis(vector <studentas>& stud);
 bool palyginimas(studentas& a, studentas& b);
+bool palyginimas2(Student& a, Student& b);
 void isvestis(vector <studentas> stud);
 void failugeneracija(int kieknd);
 void failgen(int kieknd, int kiekstud);
@@ -40,9 +60,9 @@ void kietiakaiifaila(int kieknd, vector <studentas> kiet, int kiekstud);
 //antra strategija
 
 void greicioanalizevector2(int kiekstud);
-void rusiavimasvector2(vector <studentas>& stud, vector <studentas>& nend);
-void nendartiolaiifaila2(int kieknd, vector <studentas> nend, int kiekstud);
-void kietiakaiifaila2(int kieknd, vector <studentas> stud, int kiekstud);
+void rusiavimasvector2(vector <Student>& stud, vector <Student>& nend);
+void nendartiolaiifaila2(int kieknd, vector <Student> nend, int kiekstud);
+void kietiakaiifaila2(int kieknd, vector <Student> stud, int kiekstud);
 
 void greicioanalizelist2(int kiekstud);
 void rusiavimaslist2(list <studentas>& stud, list <studentas>& nend);

@@ -1,5 +1,5 @@
 run: test.o funkcijos.o
-	g++ -o run.exe test.o funkcijos.o -static-libgcc -static-libstdc++
+	g++ -o run.exe test.o funkcijos.o -static-libgcc -static-libstdc++ -O1
 
 funkcijos.o: funkcijos.cpp struct.h
 	g++ -c funkcijos.cpp
