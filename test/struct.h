@@ -26,11 +26,11 @@ private:
     // interfeisas
 public:
     Student() : egz(0) { }  // default konstruktorius
+    ~Student(); //destruktorius
     Student(istream& in, int kieknd); //konstr
     inline string vardas() const { return vard; }    // get'eriai, inline
     inline string pavarde() const { return pavard; }  // get'eriai, inline
     inline float galbal() const { return gal; }
-    //void galBalas(vector <double> nd, double egz);  // get'eriai
     istream& readStudent(std::istream&, int kieknd);  // set'eriai
 };
 

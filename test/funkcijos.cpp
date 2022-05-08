@@ -7,18 +7,6 @@ Student::Student(std::istream& in, int kieknd)
     readStudent(in, kieknd);
 }
 
-//void Student::galBalas(vector <double> nd, double egz)
-//{
-//    double vid = 0, gall;
-//    for (int i = 0; i < nd.size(); i++)
-//    {
-//        vid += nd[i];
-//    }
-//    gall = (vid / nd.size()) * 0.4 + egz * 0.6;
-//    cout << gall;
-//    this->gal = gall;
-//}
-
 istream& Student::readStudent(istream& in, int kieknd)
 {
     string a;
@@ -33,6 +21,12 @@ istream& Student::readStudent(istream& in, int kieknd)
     in >> egz;
     gal = (vid / nd.size()) * 0.4 + egz * 0.6;
 }
+
+Student::~Student()
+{
+
+}
+
 
 void exists_test(const string& name)
 {
