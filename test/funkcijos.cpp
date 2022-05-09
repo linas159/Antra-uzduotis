@@ -22,11 +22,6 @@ istream& Student::readStudent(istream& in, int kieknd)
     gal = (vid / nd.size()) * 0.4 + egz * 0.6;
 }
 
-Student::~Student()
-{
-
-}
-
 
 void exists_test(const string& name)
 {

@@ -25,13 +25,49 @@ private:
     float gal;
     // interfeisas
 public:
-    Student() : egz(0) { }  // default konstruktorius
-    ~Student(); //destruktorius
-    Student(istream& in, int kieknd); //konstr
+    Student() :vard(""), pavard(""), egz(0), nd(0), gal(0.0) { }  // default konstruktorius
+    Student(istream& in, int kieknd); //konstruktorius
+    ~Student() {}; //destruktorius
+    Student(const Student& that) //copy konstruktorius
+    {
+        this->vard = that.vard;
+        this->pavard = that.pavard;
+        this->egz = that.egz;
+        this->nd = that.nd;
+        this->gal = that.gal;
+    }
+
+    Student& operator=(const Student& that) //copy assignment operator
+    {
+        if (this != &that)
+        {
+            this->vard = that.vard;
+            this->pavard = that.pavard;
+            this->egz = that.egz;
+            this->nd = that.nd;
+            this->gal = that.gal;
+        }
+        return *this;
+    }
+
+    friend bool operator<(const Student& a, const Student& b) //naujas operatorius
+    {
+        if (a.vard != b.vard)
+            return a.vard < b.vard;
+        else
+            return a.pavard < b.pavard;
+    }
+
     inline string vardas() const { return vard; }    // get'eriai, inline
     inline string pavarde() const { return pavard; }  // get'eriai, inline
-    inline float galbal() const { return gal; }
+    inline float galbal() const { return gal; } // get'eriai, inline
+
     istream& readStudent(std::istream&, int kieknd);  // set'eriai
+    void setVardas(string a) { vard = a; }
+    void setPavarde(string a) { pavard = a; }
+    void setEgz(double a) { egz = a; }
+    void setGal(float a) { gal = a; }
+
 };
 
 void exists_test(const string& name);
