@@ -2,27 +2,6 @@
 
 ifstream in("kursiokai.txt");
 
-Student::Student(std::istream& in, int kieknd) 
-{
-    readStudent(in, kieknd);
-}
-
-istream& Student::readStudent(istream& in, int kieknd)
-{
-    string a;
-    in >> vard >> pavard;
-    double b, vid=0;
-    for (int j = 0; j < kieknd; j++)
-    {
-        in >> b;
-        this->nd.push_back(b);
-        vid += b;
-    }
-    in >> egz;
-    gal = (vid / nd.size()) * 0.4 + egz * 0.6;
-}
-
-
 void exists_test(const string& name)
 {
     ifstream file(name);
@@ -300,6 +279,8 @@ void isvestis(vector <studentas> stud)
     my_buffer.clear();
 }
 
+//failu generacija
+
 void failugeneracija(int kieknd)
 {
     for (int i = 1000; i <= 10000000; i = i * 10)
@@ -340,6 +321,8 @@ void failgen(int kieknd, int kiekstud)
     cout << kiekstud << " generavimas i faila: " << diff.count() << endl;
     system("Pause");
 }
+
+//greicio analize
 
 void greicioanalizevector(int kiekstud)
 {
@@ -578,12 +561,15 @@ void kietiakaiifaila(int kieknd, vector <studentas> kiet, int kiekstud)
     cout << kiekstud << " kietiakai isvedimas i faila: " << diff.count() << endl;
 }
 
+//antra realizacija
+
 void greicioanalizevector2(int kiekstud)
 {
     ifstream in("kursiokai" + to_string(kiekstud) + ".txt");
     auto pradzia = high_resolution_clock::now();
-    int kieknd = 0;
-    string zod;
+    string zod, vard, pavard;
+    int kieknd = 0, paz, egz, sum = 0;
+    float gal;
     while (true)
     {
         in >> zod;
@@ -595,9 +581,26 @@ void greicioanalizevector2(int kiekstud)
     }
     kieknd += -3;
     vector <Student> stud;
+    Student stud_temp;
     for (int i = 0; i < kiekstud; i++)
     {
-        stud.push_back(Student(in, kieknd));
+        in >> vard;
+        stud_temp.setVardas(vard);
+        in >> pavard;
+        stud_temp.setPavarde(pavard);
+
+        for (int j = 0; j < kieknd; j++)
+        {
+            in >> paz;
+            sum += paz;
+        }
+        in >> egz;
+        stud_temp.setEgz(egz);
+
+        gal = (0.4 * (sum / (float)kieknd)) + (0.6 * (float)egz);
+        stud_temp.setGal(gal);
+        sum = 0;
+        stud.push_back(stud_temp);
     }
     stud.shrink_to_fit();
     in.close();

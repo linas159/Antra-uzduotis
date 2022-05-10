@@ -2,12 +2,6 @@
 
 int main()
 {
-    int test;
-    Student a;
-    Student b(a);
-    Student c=b;
-    cin >> test;
-
     srand(time(0));
     vector <studentas> stud;
     char ar;
