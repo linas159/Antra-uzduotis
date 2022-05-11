@@ -1,8 +1,8 @@
-run: test.o funkcijos.o
-	g++ -o run.exe test.o funkcijos.o -static-libgcc -static-libstdc++
+run: test.o funkcijos1.o
+	g++ -o run.exe test.o funkcijos1.o -static-libgcc -static-libstdc++ -O1
 
-funkcijos.o: funkcijos.cpp struct.h
-	g++ -c funkcijos.cpp
+funkcijos1.o: funkcijos1.cpp struct.h
+	g++ -c funkcijos1.cpp
 
 test.o: test.cpp struct.h
 	g++ -c test.cpp
