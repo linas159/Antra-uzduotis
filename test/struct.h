@@ -1,9 +1,19 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <list>
+#include <deque>
+#include <string>
+#include <algorithm>
+#include <numeric>
+#include <fstream>
+#include <sstream>
+#include <regex>
+#include <random>
+#include <iomanip>
 #include <chrono>
 
 using namespace std;
 using namespace std::chrono;
-
 
 struct studentas
 {
@@ -81,7 +91,7 @@ private:
     float gal;
     // interfeisas
 public:
-    Student() : egz(0) {} // default konstruktorius
+    Student(string vard = "", string pavard = "") : Person(vard, pavard), egz(0) {} // default konstruktorius
     Student(string vard, string pavard, double egz, float gal ) : Person(vard,pavard), egz(0), gal(0.0) { }  // konstruktorius
     ~Student() {}; //destruktorius
     Student(const Student& that) //copy konstruktorius

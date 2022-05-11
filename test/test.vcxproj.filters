@@ -18,6 +18,9 @@
     <ClCompile Include="test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="funkcijos1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="kursiokai.txt">
@@ -27,9 +30,6 @@
   <ItemGroup>
     <ClInclude Include="struct.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="funkcijos.cpp">
-      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

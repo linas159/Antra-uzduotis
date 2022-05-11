@@ -1,0 +1,171 @@
+\hypertarget{struct_8h_source}{}\doxysection{struct.\+h}
+\label{struct_8h_source}\index{test/struct.h@{test/struct.h}}
+\mbox{\hyperlink{struct_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include <bits/stdc++.h>}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{5 \textcolor{keyword}{using namespace }std::chrono;}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{struct }\mbox{\hyperlink{structstudentas}{studentas}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     \textcolor{keywordtype}{string} \mbox{\hyperlink{structstudentas_aa1a149a5d9bf52e6e4003a6cf7226c4b}{vard}};}
+\DoxyCodeLine{11     \textcolor{keywordtype}{string} \mbox{\hyperlink{structstudentas_a6d99a56fc373186150b76cb4360e0bd8}{pavard}};}
+\DoxyCodeLine{12     vector <int> \mbox{\hyperlink{structstudentas_a8aef5bd85b89d611446851d143303d35}{nd}};}
+\DoxyCodeLine{13     \textcolor{keywordtype}{int} \mbox{\hyperlink{structstudentas_a77793375d5560caf680ece7487d2be99}{egz}};}
+\DoxyCodeLine{14     \textcolor{keywordtype}{float} \mbox{\hyperlink{structstudentas_aa9bb56f3b8ae0ca132981ad4e5c33a9c}{gal}};}
+\DoxyCodeLine{15     \textcolor{keywordtype}{float} \mbox{\hyperlink{structstudentas_ad20dcdcd7aeced062338861ad2c0f351}{galmed}};}
+\DoxyCodeLine{16 \};}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_person}{Person}} \{}
+\DoxyCodeLine{19 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{20     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}};}
+\DoxyCodeLine{21     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_person_a0397c6f89fafc12e738923f612bc41a3}{Person}}() : \mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}}(\textcolor{stringliteral}{"{}"{}}), \mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}}(\textcolor{stringliteral}{"{}"{}}) \{\}}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_person_ade7bcf8ddba7b7dc224b4329a771e044}{Person}}(\textcolor{keywordtype}{string} \mbox{\hyperlink{class_person_a5aaad1a8dca06cd49e4226fd6a76118d}{vardas}}, \textcolor{keywordtype}{string} \mbox{\hyperlink{class_person_a8504feff082f318d9028ed64dff1286f}{pavarde}})}
+\DoxyCodeLine{26     \{}
+\DoxyCodeLine{27         \mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}} = \mbox{\hyperlink{class_person_a5aaad1a8dca06cd49e4226fd6a76118d}{vardas}};}
+\DoxyCodeLine{28         \mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}} = \mbox{\hyperlink{class_person_a8504feff082f318d9028ed64dff1286f}{pavarde}};}
+\DoxyCodeLine{29     \}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_person_a5aaad1a8dca06cd49e4226fd6a76118d}{vardas}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}}; \}}
+\DoxyCodeLine{32     \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_person_a8504feff082f318d9028ed64dff1286f}{pavarde}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}}; \}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_person_a6d7e28833341e1610138f5eb757b871d}{setVardas}}(\textcolor{keywordtype}{string} name) = 0;}
+\DoxyCodeLine{35     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_person_aa624ce51de6f4f71eeb45885a4b28f24}{setPavarde}}(\textcolor{keywordtype}{string} surname) = 0;}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keyword}{friend} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_person_a19f123cc410307b52573d9ea3eb567b0}{operator<}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_person}{Person}}\& a, \textcolor{keyword}{const} \mbox{\hyperlink{class_person}{Person}}\& b) \textcolor{comment}{// less than operator}}
+\DoxyCodeLine{38     \{}
+\DoxyCodeLine{39         \textcolor{keywordflow}{if} (a.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}} != b.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}})}
+\DoxyCodeLine{40             \textcolor{keywordflow}{return} a.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}} < b.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}};}
+\DoxyCodeLine{41         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{42             \textcolor{keywordflow}{return} a.\mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}} < b.\mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}};}
+\DoxyCodeLine{43     \}}
+\DoxyCodeLine{44     \textcolor{keyword}{friend} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_person_a52a705d0841effc562682cce1b27b95e}{operator>}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_person}{Person}}\& a, \textcolor{keyword}{const} \mbox{\hyperlink{class_person}{Person}}\& b) \textcolor{comment}{// greater than operator}}
+\DoxyCodeLine{45     \{}
+\DoxyCodeLine{46         \textcolor{keywordflow}{if} (a.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}} != b.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}})}
+\DoxyCodeLine{47             \textcolor{keywordflow}{return} a.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}} > b.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}};}
+\DoxyCodeLine{48         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{49             \textcolor{keywordflow}{return} a.\mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}} > b.\mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}};}
+\DoxyCodeLine{50     \}}
+\DoxyCodeLine{51     \textcolor{keyword}{friend} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_person_ab0e19b610785b87de7d2f43549d30b15}{operator<=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_person}{Person}}\& a, \textcolor{keyword}{const} \mbox{\hyperlink{class_person}{Person}}\& b) \textcolor{comment}{// less than or equal to operator}}
+\DoxyCodeLine{52     \{}
+\DoxyCodeLine{53         \textcolor{keywordflow}{if} (a.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}} != b.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}})}
+\DoxyCodeLine{54             \textcolor{keywordflow}{return} a.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}} <= b.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}};}
+\DoxyCodeLine{55         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{56             \textcolor{keywordflow}{return} a.\mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}} <= b.\mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}};}
+\DoxyCodeLine{57     \}}
+\DoxyCodeLine{58     \textcolor{keyword}{friend} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_person_a2531ceaa6238260846eab5d2951bec28}{operator>=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_person}{Person}}\& a, \textcolor{keyword}{const} \mbox{\hyperlink{class_person}{Person}}\& b) \textcolor{comment}{// greater than or equal to operator}}
+\DoxyCodeLine{59     \{}
+\DoxyCodeLine{60         \textcolor{keywordflow}{if} (a.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}} != b.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}})}
+\DoxyCodeLine{61             \textcolor{keywordflow}{return} a.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}} >= b.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}};}
+\DoxyCodeLine{62         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{63             \textcolor{keywordflow}{return} a.\mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}} >= b.\mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}};}
+\DoxyCodeLine{64     \}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66     \textcolor{keyword}{virtual} std::ostream\& \mbox{\hyperlink{class_person_a56bcdea9c558a380f5caacf90b41db10}{write}}(std::ostream\& out)\textcolor{keyword}{ const}}
+\DoxyCodeLine{67 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{68         out << \mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}} << \textcolor{stringliteral}{"{} "{}} << \mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}};}
+\DoxyCodeLine{69         \textcolor{keywordflow}{return} out;}
+\DoxyCodeLine{70     \}}
+\DoxyCodeLine{71     \textcolor{keyword}{friend} std::ostream\& \mbox{\hyperlink{class_person_ad92d27178b8a4613af07469ce1125ae1}{operator<<}}(std::ostream\& out, \textcolor{keyword}{const} \mbox{\hyperlink{class_person}{Person}}\& p) }
+\DoxyCodeLine{72     \{}
+\DoxyCodeLine{73         \textcolor{keywordflow}{return} p.\mbox{\hyperlink{class_person_a56bcdea9c558a380f5caacf90b41db10}{write}}(out);}
+\DoxyCodeLine{74     \}}
+\DoxyCodeLine{75 \};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 \textcolor{keyword}{class }\mbox{\hyperlink{class_student}{Student}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_person}{Person}} \{}
+\DoxyCodeLine{78     \textcolor{comment}{// realizacija}}
+\DoxyCodeLine{79 \textcolor{keyword}{private}:}
+\DoxyCodeLine{80     \textcolor{keywordtype}{double} egz;}
+\DoxyCodeLine{81     \textcolor{keywordtype}{float} gal;}
+\DoxyCodeLine{82     \textcolor{comment}{// interfeisas}}
+\DoxyCodeLine{83 \textcolor{keyword}{public}:}
+\DoxyCodeLine{84     \mbox{\hyperlink{class_student_aed0cab5011aca48a4aeb58d0da224bed}{Student}}(\textcolor{keywordtype}{string} \mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}} = \textcolor{stringliteral}{"{}"{}}, \textcolor{keywordtype}{string} \mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}} = \textcolor{stringliteral}{"{}"{}}) : \mbox{\hyperlink{class_person}{Person}}(\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}}, \mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}}), egz(0) \{\} \textcolor{comment}{// default konstruktorius}}
+\DoxyCodeLine{85     \mbox{\hyperlink{class_student_a837639274cb059a1cd185c3ee1fa063b}{Student}}(\textcolor{keywordtype}{string} \mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}}, \textcolor{keywordtype}{string} \mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}}, \textcolor{keywordtype}{double} egz, \textcolor{keywordtype}{float} gal ) : \mbox{\hyperlink{class_person}{Person}}(\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}},\mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}}), egz(0), gal(0.0) \{ \}  \textcolor{comment}{// konstruktorius}}
+\DoxyCodeLine{86     \mbox{\hyperlink{class_student_a54a8ea060d6cd04222c3a2f89829f105}{\string~Student}}() \{\}; \textcolor{comment}{//destruktorius}}
+\DoxyCodeLine{87     \mbox{\hyperlink{class_student_af5d947073ef209a30a28454e4cfc2b3f}{Student}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_student}{Student}}\& that) \textcolor{comment}{//copy konstruktorius}}
+\DoxyCodeLine{88     \{}
+\DoxyCodeLine{89         this-\/>\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}} = that.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}};}
+\DoxyCodeLine{90         this-\/>\mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}} = that.\mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}};}
+\DoxyCodeLine{91         this-\/>egz = that.egz;}
+\DoxyCodeLine{92         this-\/>gal = that.gal;}
+\DoxyCodeLine{93     \}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95     \mbox{\hyperlink{class_student}{Student}}\& \mbox{\hyperlink{class_student_acd9c816e905240a8ee3d4f4b4b678906}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_student}{Student}}\& that) \textcolor{comment}{//copy assignment operator}}
+\DoxyCodeLine{96     \{}
+\DoxyCodeLine{97         \textcolor{keywordflow}{if} (\textcolor{keyword}{this} != \&that)}
+\DoxyCodeLine{98         \{}
+\DoxyCodeLine{99             this-\/>\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}} = that.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}};}
+\DoxyCodeLine{100             this-\/>\mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}} = that.\mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}};}
+\DoxyCodeLine{101             this-\/>egz = that.egz;}
+\DoxyCodeLine{102             this-\/>gal = that.gal;}
+\DoxyCodeLine{103         \}}
+\DoxyCodeLine{104         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{105     \}}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107     \textcolor{keyword}{friend} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_student_ae65f7355c5b9e95117aaf9bc93660ce9}{operator<}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_student}{Student}}\& a, \textcolor{keyword}{const} \mbox{\hyperlink{class_student}{Student}}\& b) \textcolor{comment}{//naujas operatorius}}
+\DoxyCodeLine{108     \{}
+\DoxyCodeLine{109         \textcolor{keywordflow}{if} (a.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}} != b.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}})}
+\DoxyCodeLine{110             \textcolor{keywordflow}{return} a.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}} < b.\mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}};}
+\DoxyCodeLine{111         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{112             \textcolor{keywordflow}{return} a.\mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}} < b.\mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}};}
+\DoxyCodeLine{113     \}}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115     \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_student_aea878e6143bcff90e645fdb16b4de8a4}{vardas}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}}; \}    \textcolor{comment}{// get'eriai, inline}}
+\DoxyCodeLine{116     \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_student_af9c6efdff300a182b28704b58abd043c}{pavarde}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}}; \}  \textcolor{comment}{// get'eriai, inline}}
+\DoxyCodeLine{117     \textcolor{keyword}{inline} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_student_a509b816fc888d7c1098acc85e61aa472}{galbal}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} gal; \} \textcolor{comment}{// get'eriai, inline}}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119     \textcolor{comment}{//set'eriai}}
+\DoxyCodeLine{120     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_student_a40f6abd081e33cccaa402e6f577ccd0a}{setVardas}}(\textcolor{keywordtype}{string} a) \{ \mbox{\hyperlink{class_person_a189ad791c9744f6421f3e9f661d79168}{vard}} = a; \}}
+\DoxyCodeLine{121     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_student_aa4f79b824242231e7379ac7712dfe638}{setPavarde}}(\textcolor{keywordtype}{string} a) \{ \mbox{\hyperlink{class_person_abfbc33cd42bf5ff1f9b4495a53edd2c7}{pavard}} = a; \}}
+\DoxyCodeLine{122     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_student_af177a63fdc0d6491e39b207e3caaebc9}{setEgz}}(\textcolor{keywordtype}{double} a) \{ egz = a; \}}
+\DoxyCodeLine{123     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_student_ad26d91aaf4d14c331b96f3a6873e7131}{setGal}}(\textcolor{keywordtype}{float} a) \{ gal = a; \}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125 \};}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_aa6e78d86930c3fc50543c2b2cf07260d}{exists\_test}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& name);}
+\DoxyCodeLine{128 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_a9511a6ee7e50ef80280b6e1c2f7a819d}{skaicius}}(\textcolor{keywordtype}{int}\& a);}
+\DoxyCodeLine{129 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_a33aed2f408086099cd6a21a1bbcbcd04}{ivestisranka}}(vector <studentas>\& stud);}
+\DoxyCodeLine{130 \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_8h_ad2a1c552357fdfa972759fa3a81a0d82}{kiekpazymiu}}();}
+\DoxyCodeLine{131 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_acba909ba84506d8ea405c3d191b751fa}{ivestis}}(vector <studentas>\& stud);}
+\DoxyCodeLine{132 \textcolor{keywordtype}{bool} \mbox{\hyperlink{struct_8h_a1462bca974d419964f6e4a41550d29cf}{palyginimas}}(\mbox{\hyperlink{structstudentas}{studentas}}\& a, \mbox{\hyperlink{structstudentas}{studentas}}\& b);}
+\DoxyCodeLine{133 \textcolor{keywordtype}{bool} \mbox{\hyperlink{struct_8h_ac9e907d3fae0d293876770ba601d210a}{palyginimas2}}(\mbox{\hyperlink{class_student}{Student}}\& a, \mbox{\hyperlink{class_student}{Student}}\& b);}
+\DoxyCodeLine{134 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_ac3176212a5af0eb462501b4f0ace4eae}{isvestis}}(vector <studentas> stud);}
+\DoxyCodeLine{135 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_a8ca19294946034bfb3894042d71a4256}{failugeneracija}}(\textcolor{keywordtype}{int} kieknd);}
+\DoxyCodeLine{136 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_a392c832821b858b0f929483726e04849}{failgen}}(\textcolor{keywordtype}{int} kieknd, \textcolor{keywordtype}{int} kiekstud);}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_a1904bea763437f2223e934527f70b0ff}{greicioanalizevector}}(\textcolor{keywordtype}{int} kiekstud);}
+\DoxyCodeLine{139 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_a39676a7fff17f3cc54c3bcf75a22a5e9}{rusiavimasvector}}(vector <studentas> \&stud, vector <studentas>\& nend, vector <studentas>\& kiet);}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_ae54f457576662517714308c3d3caf191}{greicioanalizelist}}(\textcolor{keywordtype}{int} kiekstud);}
+\DoxyCodeLine{142 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_a2aaeb6fd2bbdc94092fb906fca8b2321}{rusiavimaslist}}(list <studentas> \&stud, list <studentas>\& nend, list <studentas>\& kiet);}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_a9296467066f94912f5a8e40a2ffa8049}{greicioanalizedeque}}(\textcolor{keywordtype}{int} kiekstud);}
+\DoxyCodeLine{145 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_ac3095ae94546893b6fa1e98d758bc352}{rusiavimasdeque}}(deque <studentas> \&stud, deque <studentas>\& nend, deque <studentas>\& kiet);}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_aac92aaa0249aa0c919720e7741f806db}{nendartiolaiifaila}}(\textcolor{keywordtype}{int} kieknd, vector <studentas> nend, \textcolor{keywordtype}{int} kiekstud);}
+\DoxyCodeLine{148 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_abbfa092d3f5056e3999b9f0cd8cdf52f}{kietiakaiifaila}}(\textcolor{keywordtype}{int} kieknd, vector <studentas> kiet, \textcolor{keywordtype}{int} kiekstud);}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150 \textcolor{comment}{//antra strategija}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_afa0029270b66430d91b536143a3201cc}{greicioanalizevector2}}(\textcolor{keywordtype}{int} kiekstud);}
+\DoxyCodeLine{153 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_ae0076802b102d6953b3be4dc5878180d}{rusiavimasvector2}}(vector <Student>\& stud, vector <Student>\& nend);}
+\DoxyCodeLine{154 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_a71cf97b47a7be8b340575864d490cc7b}{nendartiolaiifaila2}}(\textcolor{keywordtype}{int} kieknd, vector <Student> nend, \textcolor{keywordtype}{int} kiekstud);}
+\DoxyCodeLine{155 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_ab9d9c725a63a3e3644331be2e2946974}{kietiakaiifaila2}}(\textcolor{keywordtype}{int} kieknd, vector <Student> stud, \textcolor{keywordtype}{int} kiekstud);}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_a96304a26b42462e67dbc4e40577c7a74}{greicioanalizelist2}}(\textcolor{keywordtype}{int} kiekstud);}
+\DoxyCodeLine{158 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_ac0591fde54b570f769939c8f82586039}{rusiavimaslist2}}(list <studentas>\& stud, list <studentas>\& nend);}
+\DoxyCodeLine{159 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_aad14edfd4933daf2096d228c479e5d53}{nendartiolaiifailalist2}}(\textcolor{keywordtype}{int} kieknd, list <studentas> nend, \textcolor{keywordtype}{int} kiekstud);}
+\DoxyCodeLine{160 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_a2f34a539453212ef6936e1e6b027f386}{kietiakaiifailalist2}}(\textcolor{keywordtype}{int} kieknd, list <studentas> stud, \textcolor{keywordtype}{int} kiekstud);}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_abbec640da986c0098f6a843b3baa0d01}{greicioanalizedeque2}}(\textcolor{keywordtype}{int} kiekstud);}
+\DoxyCodeLine{163 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_abdb0f31900eb9b3a823c61e8c55b796e}{rusiavimasdeque2}}(deque <studentas>\& stud, deque <studentas>\& nend);}
+\DoxyCodeLine{164 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_a8a5f7c7a2b6500834372d0c78d18c0a3}{nendartiolaiifailadeque2}}(\textcolor{keywordtype}{int} kieknd, deque <studentas> nend, \textcolor{keywordtype}{int} kiekstud);}
+\DoxyCodeLine{165 \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_8h_abe5072e814e2a5698bc041e1a9eeb61d}{kietiakaiifailadeque2}}(\textcolor{keywordtype}{int} kieknd, deque <studentas> stud, \textcolor{keywordtype}{int} kiekstud);}
+
+\end{DoxyCode}
