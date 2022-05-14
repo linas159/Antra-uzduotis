@@ -12,6 +12,7 @@
 #include <iomanip>
 #include <chrono>
 
+
 using namespace std;
 using namespace std::chrono;
 
@@ -91,7 +92,7 @@ private:
     float gal;
     // interfeisas
 public:
-    Student(string vard = "", string pavard = "") : Person(vard, pavard), egz(0) {} // default konstruktorius
+    Student(string vard = "", string pavard = "") : Person(vard, pavard), egz(0), gal(0) {} // default konstruktorius
     Student(string vard, string pavard, double egz, float gal ) : Person(vard,pavard), egz(0), gal(0.0) { }  // konstruktorius
     ~Student() {}; //destruktorius
     Student(const Student& that) //copy konstruktorius
@@ -133,6 +134,12 @@ public:
     void setGal(float a) { gal = a; }
 
 };
+
+//TEST
+double vidurkis(vector<int> a);
+double mediana(vector<int> a);
+bool ar_pazymys(const string s);
+//TEST
 
 void exists_test(const string& name);
 void skaicius(int& a);
