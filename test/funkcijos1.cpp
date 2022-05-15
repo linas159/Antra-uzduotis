@@ -2,6 +2,37 @@
 
 ifstream in("kursiokai.txt");
 
+double vidurkis(vector<int> a) {
+    if (a.size() > 0) {
+        return accumulate(a.begin(), a.end(), 0.0) / a.size();
+    }
+    else {
+        return 0;
+    }
+}
+
+double mediana(vector<int> a) {
+    if (a.size() == 0)
+        return 0;
+
+    sort(a.begin(), a.end());
+
+    if (a.size() % 2 == 0) {
+        return (a[a.size() / 2] + a[(a.size() / 2) - 1]) / 2.0;
+    }
+    else {
+        return a[a.size() / 2];
+    }
+}
+
+bool ar_pazymys(const string s) {
+    regex reg("[0-9]");
+    if (regex_match(s, reg) || s == "10")
+        return true;
+    else
+        return false;
+}
+
 void exists_test(const string& name)
 {
     ifstream file(name);
