@@ -112,3 +112,43 @@ Vietoje Jūsų turimos vienos Studentas (ar kažkaip kitaip pavadintos) klasės 
 Padarykite, kad žmogui skirta bazinė klasė būtų abstrakčioji klasė, t.y. nebūtų galima sukurti žmogaus tipo objektų, o tik objektus gautus iš jos išvestinių klasių.
 
 ![image](https://user-images.githubusercontent.com/93277316/167713990-482d9fc4-48f2-49e8-b8e0-364413f727ba.png)
+
+
+v2.0
+
+Sukurkite dokumentaciją panaudojant Doxygen 1.5 projekto pagrindu. Įkelkite dokumentaciją (kaip atskirą doxygen katalogą) į repoziciją.
+Realizuokite Unit Testus naudodami Jums labiausiai patinkantį C++ Unit testų framework'ą. Užtenka pademonstruoti, kad supratote, kam jie reikalingi, t.y. užtenka kelių testų. 
+Sukurkite 1.5 versijai automatinį įdiegimo failą (setup.msi arba setup.exe)
+Galutinėje versijoje turi būti pateikta:
+
+Tvarkinga github repozicija, kurioje būtų tik Jūsų kurti (source) failai, t.y. jokių naudojamo IDE "šiukšlių".
+
+Projekto įdiegimo failas, arba jei tokios galimybės nėra make Makefile (Unix OS atveju).
+
+README.md faile aprašyti visi releasai, bei pakomentuoti gauti rezultatai.
+
+Parengta naudojimosi instrukcija, t.y. pagrindiniai žingsniai aprašyti tame pačiame README.md faile.
+
+Parengta įdiegimo instrukcija.
+
+
+Įdiegimo instrukcija: (Programos instaliavimas)
+
+1. Atsisiųskite programos setup.exe arba Setup.msi failą
+
+2. Paleiskite atsisiųstą failą, spauskite Next
+ 
+![image](https://user-images.githubusercontent.com/93277316/168485013-68db94e1-3c78-4b5b-8e97-a7d12c8ef53b.png)
+
+
+3. Pasirinkite, kur norite instaliuoti programą, spauskite Next
+
+![image](https://user-images.githubusercontent.com/93277316/168485038-a5ba01ff-2e51-4733-9a50-138910fd803e.png)
+
+
+4. Spauskite Next
+
+![image](https://user-images.githubusercontent.com/93277316/168485049-012b5e98-6158-4692-8e62-4139d3d57eaa.png)
+
+
+Arba galima atsisiusti portable versija.
